@@ -49,7 +49,7 @@ public class BatchConfig {
     @Bean
     public Step chunkStep(){
         return stepBuilderFactory.get("HelloChunkStep")
-                .<String, String>chunk(3)
+                .<String, String>chunk(1)
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
